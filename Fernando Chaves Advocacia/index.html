@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Chves Advocacia</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/EmailModel.js"></script>
+        <script src="js/ViewContato.js"></script>
+        <script src="js/ContatoController.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div class="img-fundo"></div>
+            <h1>Fernando Chaves Advocacia</h1>
+            <div class="div-header">
+                <ul class="ul-header">
+                    <li><a href="">Quem somos</a></li>
+                    <li><a href="">Áreas de Atuação</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>                
+            </div>
+        </header>
+
+        <main>
+             
+            <section class="sobre">
+                    <h2 class="titulos">Sobre a Chaves Advocacia</h2>
+                    <p>
+                        Com mais de 30 anos de experiencia na área o Dr. Fernando Chaves está pronto a resolver
+                        sua complicações com: INSS, problemas trabalhistas, indenizações, impostos e muito mais.
+                        <br>Traga seu problema e com certeza teremos uma solução. 
+                    </p>                                 
+            </section>
+
+            <section class="areas-atuacao"> 
+                <div class="div-atuacao">
+                    <h3 class="titulos">Áreas de Atuação</h3>
+                    <ul>
+                        <li>INSS</li>
+                        <li>Direito Trabalista</li>
+                        <li>Impostos</li>
+                        <li>Direito Familiar</li>
+                        <li>Rolada</li>
+                        <li>Mamada</li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section class="contato" id="contatoSection">
+                <h4 class="titulos">Contato</h4>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1092.680243389197!2d-47.05993272088282!3d-22.901432185086186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8b2dce74607%3A0x21bbf51a2fa6cca9!2sR.%20Dr.%20Quirino%2C%201528%20-%20Vila%20Itapura%2C%20Campinas%20-%20SP%2C%2013015-082!5e0!3m2!1spt-BR!2sbr!4v1620790873412!5m2!1spt-BR!2sbr" width="100%" height="650px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p>R.Dr.Quirino 1528, Centro - Campinas/SP</p>
+                <div class="contato-info">
+                    <fieldset class="contato-opacao">
+                        <legend>Como você prefere nos contactar?</legend>
+                            <label for="radio-email">
+                                <input type="radio" class="radio" name="contatoOpcao" id="radio-email" value="email" required>
+                                Email
+                            </label>
+                            
+                            <label for="radio-wtt">
+                                <input type="radio" class="radio" name="contatoOpcao" id="radio-wtt" value="whatsapp" required>
+                                WhatsApp
+                            </label>
+                    </fieldset>
+                    <div class="div-zapzap" id="div-contato-selecionado"></div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
+    <script>
+        
+        let controller = new ContatoController().verificaOpcaoContato();
+    </script>
+</html>

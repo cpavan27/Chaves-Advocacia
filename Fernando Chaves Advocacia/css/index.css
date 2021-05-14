@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong:ital@1&display=swap');
+
+.img-fundo{
+    background: url("/images/dama-da-lei.webp");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+header {
+    padding: 1em;
+}
+header h1{
+    position: relative;
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 5em;
+    margin: 0 auto;
+    width: 640px;
+}
+.img-fundo{
+    background: url("/images/dama-da-lei.webp");
+    background-size: cover;
+    position: absolute;
+    opacity: 0.2;
+    height: 150%;
+}
+.div-header{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.div-header ul{
+    margin: 20px auto 0 auto;
+    width: 57%;
+
+}
+.div-header li{
+    display: inline;
+    margin-left: 10px;
+    font-size: 2em;    
+}
+.div-header a{
+    text-decoration: none;
+    color: black;
+}
+.div-header a:hover{
+    color: goldenrod;
+}
+.titulos{
+    font-family: 'Trirong', serif;
+    font-size: 2.5em;
+}
+.sobre{
+    position: relative;
+    background-color: #FEFEFE;
+    padding: 2em;
+}
+.sobre h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sobre p{
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+.div-atuacao{
+    position: relative;
+    width: 940px;
+    margin: 20px auto;
+    padding: 1em;
+}
+.div-atuacao h3, .contato h4{
+    text-align: center;
+}
+.div-atuacao ul{
+    width: 600px;
+    margin: 20px auto;
+}
+.div-atuacao li{
+    display: inline-table;
+    text-align: center;
+    width: 30%;
+}
+.contato{
+    background-color: rgb(240, 236, 236);
+    height: 800px;
+    padding: 1em;
+    position: relative;
+}
+.contato h4{
+    margin-bottom: 20px;
+}
+.contato > p{
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.mapa{
+    width: 48%;
+    position: absolute;
+    left: 1%;
+    top: 15%;
+}
+.mapa iframe{
+    border-radius: 5px;
+}
+.contato-info{
+    position: absolute;
+    width: 48%;
+    right: 1%;
+}
+.contato-opacao legend{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-family: 'Trirong', serif;
+}
+.contato-opacao label{
+    margin-left: 28%;
+}
+.form-contato{
+    padding: 1em;
+    box-sizing: border-box;
+}
+.label-text{
+    font-size: 1.5em;
+    font-family: 'Trirong', serif;
+}
+.input-text, textarea{
+    display: block;
+    width: 70%;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+.input-text:focus, .form-contato textarea:focus {
+    box-shadow: inset 0 0 5px rgb(78, 78, 243);
+}
+.botao{
+    margin-top: 1em;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: silver;
+    font-size: 1.2em;
+}
+.botao:hover{
+    transition: 0.2s;
+    background-color: goldenrod;
+    color: #FEFEFE;
+}
+.botao:active{
+    background-color: #FEFEFE;
+    color: goldenrod;
+    box-shadow: none;
+}
+.div-zapzap{
+    padding-left: 1em;
+    padding-top: 3em;
+}
+.div-zapzap p{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.zapzap-link{
+    border: 5px solid #FEFEFE;
+    border-radius: 5px;
+    margin-left: 37%;
+    margin-top: 16%;
+    width: 209px;
+    height: 267px;
+}
+.zapzap-link:hover, .zapzap-link:hover h2{
+    transition: 0.2s;
+    background-color: silver;
+    color: gold;
+}
+.zapzap-link:active{
+    border: 5px inset #FEFEFE;
+}
+.zapzap-link a{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-decoration:none;
+}
+.zapzap-link img{
+    width: 72%;
+    padding-left: 27px;
+}
+.zapzap-link h2{
+    text-align: center;
+    color: black;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.5em;
+    line-height: 1.2;
+}
