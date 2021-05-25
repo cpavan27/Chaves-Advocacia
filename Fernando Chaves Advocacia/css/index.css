@@ -1,223 +1,255 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Trirong:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trirong:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 
-.img-fundo{
-    background: url("/images/dama-da-lei.webp");
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.2;
+.img-fundo {
+  background: url("/images/dama-da-lei.webp");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  height: 227%;
 }
 header {
-    padding: 1em;
+  position: relative;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-header h1{
-    position: relative;
-    text-align: center;
-    font-family: 'Playfair Display SC', serif;
-    font-size: 5em;
-    margin: 0 auto;
-    width: 640px;
+header h1 {
+  text-align: center;
+  font-family: "Playfair Display SC", serif;
+  font-size: 5em;
 }
-.img-fundo{
-    background: url("/images/dama-da-lei.webp");
-    background-size: cover;
-    position: absolute;
-    opacity: 0.2;
-    height: 185%;
+.nav-header {
+  width: 940px;
+  margin: 0 auto;
+  padding: 1em;
 }
-.div-header{
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
-    padding: 1em;
+.ul-nav {
+  display: flex;
+  margin: 20px auto 0 auto;
+  width: 72%;
 }
-.div-header ul{
-    margin: 20px auto 0 auto;
-    width: 72%;
+.item-nav {
+  margin-left: 10px;
+  font-size: 2em;
+  font-family: "Nanum Myeongjo", serif;
+}
+.link-nav {
+  text-decoration: none;
+  color: black;
+}
+.link-nav:hover {
+  color: goldenrod;
+}
+.titulos {
+  font-family: "Trirong", serif;
+  font-size: 2.5em;
+}
+.sobre {
+  position: relative;
+  background-color: #fefefe;
+  padding: 2em;
+}
+.sobre-titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sobre-text {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+.areas-atuacao {
+  position: relative;
+}
+.areas-atuacao-titulo {
+  text-align: center;
+  margin-top: 10px;
+}
+.div-atuacao {
+  width: 940px;
+  margin: 20px auto;
+  padding: 1em;
+}
 
+.lista-atuacao {
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
 }
-.div-header li{
-    display: inline;
-    margin-left: 10px;
-    font-size: 2em;
-    font-family: 'Nanum Myeongjo', serif;
+.atuacao-item {
+  box-shadow: 2px 2px 2px #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 1%;
+  width: 30%;
+  height: 100px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.div-header a{
-    text-decoration: none;
-    color: black;
+.item-text {
+  font-family: "Nanum Myeongjo", serif;
+  position: absolute;
+  font-size: 2em;
 }
-.div-header a:hover{
-    color: goldenrod;
+.tooltip {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
-.titulos{
-    font-family: 'Trirong', serif;
-    font-size: 2.5em;
+.tooltip-container {
+  width: 300px;
+  background-color: #fefefe;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 5px 0;
+  visibility: hidden;
+  position: absolute;
+  top: -60%;
+  left: 1%;
 }
-.sobre{
-    position: relative;
-    background-color: #FEFEFE;
-    padding: 2em;
-}
-.sobre h2{
-    text-align: center;
-    margin-bottom: 20px;
-}
-.sobre p{
-    text-align: center;
-    width: 40%;
-    margin: 0 auto;
-    font-size: 1.3em;
-    line-height: 1.5em;
-}
-.div-atuacao{
-    position: relative;
-    width: 940px;
-    margin: 20px auto;
-    padding: 1em;
-}
-.div-atuacao h3, .contato h4{
-    text-align: center;
-}
-.div-atuacao ul{
-    width: 600px;
-    margin: 20px auto;
-}
-.div-atuacao li{
-    display: inline-table;
-    text-align: center;
-    width: 30%;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: 10px 1%;
-    font-size: 2em;
-    width: 30%;
-    height: 100px;
-    padding-top: 50px;
-    font-family: 'Nanum Myeongjo', serif;
+.tooltip-text {
+  color: black;
+  text-align: center;
 
+  /* Position the tooltip */
 }
-.contato{
-    background-color: #d6d6d6;
-    height: 800px;
-    padding: 1em;
-    position: relative;
+.tooltip:hover .tooltip-container {
+  visibility: visible;
 }
-.contato h4{
-    margin-bottom: 20px;
+
+.contato {
+  background-color: #d6d6d6;
+  height: 800px;
+  padding: 1em;
+  position: relative;
 }
-.contato > p{
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 30px;
+.contato h4 {
+  margin-bottom: 20px;
+  text-align: center;
 }
-.mapa{
-    width: 48%;
-    position: absolute;
-    left: 1%;
-    top: 15%;
+.contato > p {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
 }
-.mapa iframe{
-    border-radius: 5px;
+.mapa {
+  width: 48%;
+  position: absolute;
+  left: 1%;
+  top: 15%;
 }
-.contato-info{
-    position: absolute;
-    width: 48%;
-    right: 1%;
+.mapa iframe {
+  border-radius: 5px;
 }
-.contato-opacao legend{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    font-family: 'Trirong', serif;
+.contato-info {
+  position: absolute;
+  width: 48%;
+  right: 1%;
 }
-.contato-opacao label{
-    margin-left: 28%;
+.contato-opacao legend {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-family: "Trirong", serif;
 }
-.form-contato{
-    padding: 1em;
-    box-sizing: border-box;
+.contato-opacao label {
+  margin-left: 28%;
 }
-.label-text{
-    font-size: 1.5em;
-    font-family: 'Trirong', serif;
+.form-contato {
+  padding: 1em;
+  box-sizing: border-box;
 }
-.input-text, textarea{
-    display: block;
-    width: 70%;
-    margin-bottom: 1em;
-    font-size: 1.2em;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
+.label-text {
+  font-size: 1.5em;
+  font-family: "Trirong", serif;
 }
-.input-text:focus, .form-contato textarea:focus {
-    box-shadow: inset 0 0 5px rgb(78, 78, 243);
+.input-text,
+textarea {
+  display: block;
+  width: 70%;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
 }
-.botao{
-    margin-top: 1em;
-    width: 200px;
-    height: 50px;
-    border-radius: 5px;
-    border: 5px solid #FEFEFE;
-    background-color: #FEFEFE;
-    font-size: 1.2em;
+.input-text:focus,
+.form-contato textarea:focus {
+  box-shadow: inset 0 0 5px rgb(78, 78, 243);
 }
-.botao:hover{
-    transition: 0.2s;
-    background-color: goldenrod;
-    color: #FEFEFE;
+.botao {
+  margin-top: 1em;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: 5px solid #fefefe;
+  background-color: #fefefe;
+  font-size: 1.2em;
 }
-.botao:active{
-    background-color: #FEFEFE;
-    color: goldenrod;
-    box-shadow: none;
+.botao:hover {
+  transition: 0.2s;
+  background-color: goldenrod;
+  color: #fefefe;
 }
-.div-zapzap{
-    padding-left: 1em;
-    padding-top: 3em;
+.botao:active {
+  background-color: #fefefe;
+  color: goldenrod;
+  box-shadow: none;
 }
-.div-zapzap p{
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
+.div-zapzap {
+  padding-left: 1em;
+  padding-top: 3em;
 }
-.zapzap-link{
-    border: 5px solid #FEFEFE;
-    background-color: #FEFEFE;
-    border-radius: 5px;
-    margin-left: 37%;
-    margin-top: 16%;
-    width: 209px;
-    height: 270px;
+.div-zapzap p {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
-.zapzap-link:hover, .zapzap-link:hover h2{
-    transition: 0.2s;
-    color: gold;
+.zapzap-link {
+  border: 5px solid #fefefe;
+  background-color: #fefefe;
+  border-radius: 5px;
+  margin-left: 37%;
+  margin-top: 16%;
+  width: 209px;
+  height: 270px;
 }
-.zapzap-link:active{
-    border: 5px inset #FEFEFE;
+.zapzap-link:hover,
+.zapzap-link:hover h2 {
+  transition: 0.2s;
+  color: gold;
 }
-.zapzap-link a{
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    text-decoration:none;
+.zapzap-link:active {
+  border: 5px inset #fefefe;
 }
-.zapzap-link img{
-    width: 72%;
-    padding-left: 27px;
+.zapzap-link a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  text-decoration: none;
 }
-.zapzap-link h2{
-    text-align: center;
-    color: black;
-    font-family: 'Playfair Display SC', serif;
-    font-size: 1.5em;
-    line-height: 1.2;
+.zapzap-link img {
+  width: 72%;
+  padding-left: 27px;
+}
+.zapzap-link h2 {
+  text-align: center;
+  color: black;
+  font-family: "Playfair Display SC", serif;
+  font-size: 1.5em;
+  line-height: 1.2;
 }
