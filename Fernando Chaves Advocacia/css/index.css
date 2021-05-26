@@ -2,41 +2,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Trirong:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 
-.img-fundo {
-  background: url("/images/dama-da-lei.webp");
+body,
+html {
+  height: 100vh;
+  background-image: url("/images/dama-da-lei.webp");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.2;
-  height: 227%;
+  background-position: center center;
 }
 header {
-  position: relative;
   padding: 1em;
+  width: 940px;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  opacity: 0.99;
+  background-color: #fefefe;
+  border-radius: 3px;
 }
-header h1 {
+.logo {
   text-align: center;
   font-family: "Playfair Display SC", serif;
   font-size: 5em;
+  margin-bottom: 0.5em;
 }
 .nav-header {
-  width: 940px;
-  margin: 0 auto;
   padding: 1em;
+  margin: 0 auto;
 }
 .ul-nav {
   display: flex;
-  margin: 20px auto 0 auto;
-  width: 72%;
+  justify-content: space-around;
+  padding: 1em;
+  background-color: #fefefe;
 }
 .item-nav {
-  margin-left: 10px;
   font-size: 2em;
   font-family: "Nanum Myeongjo", serif;
 }
@@ -52,9 +54,9 @@ header h1 {
   font-size: 2.5em;
 }
 .sobre {
-  position: relative;
   background-color: #fefefe;
   padding: 2em;
+  opacity: 0.9;
 }
 .sobre-titulo {
   text-align: center;
@@ -67,12 +69,9 @@ header h1 {
   font-size: 1.3em;
   line-height: 1.5em;
 }
-.areas-atuacao {
-  position: relative;
-}
 .areas-atuacao-titulo {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .div-atuacao {
   width: 940px;
@@ -92,7 +91,6 @@ header h1 {
   margin: 1%;
   width: 30%;
   height: 100px;
-  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +98,7 @@ header h1 {
 .item-text {
   font-family: "Nanum Myeongjo", serif;
   position: absolute;
-  font-size: 2em;
+  font-size: 1.7em;
 }
 .tooltip {
   position: relative;
@@ -130,46 +128,58 @@ header h1 {
 }
 
 .contato {
-  background-color: #d6d6d6;
+  background-color: #fefefe;
   height: 800px;
   padding: 1em;
-  position: relative;
+  opacity: 0.99;
+  display: flex;
+  flex-flow: column;
 }
 .contato h4 {
   margin-bottom: 20px;
   text-align: center;
+  width: 100%;
 }
 .contato > p {
   text-align: center;
   font-style: italic;
   margin-bottom: 30px;
-}
-.mapa {
-  width: 48%;
-  position: absolute;
-  left: 1%;
-  top: 15%;
-}
-.mapa iframe {
-  border-radius: 5px;
+  width: 100%;
 }
 .contato-info {
-  position: absolute;
+  height: 85%;
+  display: flex;
+  flex-flow: column wrap;
+}
+.mapa {
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+}
+.contato-opcao {
   width: 48%;
   right: 1%;
+  align-self: flex-start;
 }
-.contato-opacao legend {
+.contato-opcao-selction {
+  display: flex;
+  justify-content: space-around;
+}
+.contato-opcao-selction legend {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2em;
   font-family: "Trirong", serif;
 }
-.contato-opacao label {
-  margin-left: 28%;
-}
 .form-contato {
   padding: 1em;
-  box-sizing: border-box;
+  margin: 14px 0 0 15px;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+.form-contato-fieldset {
+  display: flex;
+  flex-direction: column;
 }
 .label-text {
   font-size: 1.5em;
@@ -177,13 +187,12 @@ header h1 {
 }
 .input-text,
 textarea {
-  display: block;
-  width: 70%;
   margin-bottom: 1em;
   font-size: 1.2em;
   padding: 8px;
   border: none;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px #ccc;
 }
 .input-text:focus,
 .form-contato textarea:focus {
@@ -194,9 +203,10 @@ textarea {
   width: 200px;
   height: 50px;
   border-radius: 5px;
-  border: 5px solid #fefefe;
+  border: 1px solid #fefefe;
   background-color: #fefefe;
   font-size: 1.2em;
+  box-shadow: 2px 2px 2px #ccc;
 }
 .botao:hover {
   transition: 0.2s;
@@ -252,4 +262,13 @@ textarea {
   font-family: "Playfair Display SC", serif;
   font-size: 1.5em;
   line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+  header {
+    width: auto;
+  }
+  .ul-nav {
+    flex-direction: column;
+  }
 }

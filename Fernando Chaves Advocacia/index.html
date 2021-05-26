@@ -14,26 +14,23 @@
     <script src="js/ContatoController.js"></script>
   </head>
   <body>
-    <div class="img-fundo"></div>
     <header>
-      <h1>Fernando<br />Chaves<br />Advocacia</h1>
-      <nav class="nav-header">
-        <ul class="ul-nav">
-          <li class="item-nav">
-            <a href="#" class="link-nav">&#8226;Quem somos</a>
-          </li>
-          <li class="item-nav">
-            <a href="#" class="link-nav">&#8226;Áreas de Atuação</a>
-          </li>
-          <li class="item-nav">
-            <a href="#" class="link-nav">&#8226;Contato</a>
-          </li>
-        </ul>
-      </nav>
+      <h1 class="logo">Fernando<br />Chaves<br />Advocacia</h1>
+      <ul class="ul-nav">
+        <li class="item-nav">
+          <a href="#sobre" class="link-nav">&#8226;Quem somos</a>
+        </li>
+        <li class="item-nav">
+          <a href="#areas-atuacao" class="link-nav">&#8226;Áreas de Atuação</a>
+        </li>
+        <li class="item-nav">
+          <a href="#contato" class="link-nav">&#8226;Contato</a>
+        </li>
+      </ul>
     </header>
 
     <main>
-      <section class="sobre">
+      <section class="sobre" id="sobre">
         <h2 class="sobre-titulo titulos">Sobre a Chaves Advocacia</h2>
         <p class="sobre-text">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -52,7 +49,7 @@
         </p>
       </section>
 
-      <section class="areas-atuacao">
+      <section class="areas-atuacao" id="areas-atuacao">
         <h3 class="areas-atuacao-titulo titulos">Áreas de Atuação</h3>
         <div class="div-atuacao">
           <ul class="lista-atuacao">
@@ -128,51 +125,62 @@
                 </div>
               </div>
             </li>
+            <li class="atuacao-item">
+              <h1 class="item-text">Teste</h1>
+              <div class="tooltip">
+                <div class="tooltip-container">
+                  <span class="tooltip-text">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et
+                  </span>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section class="contato" id="contatoSection">
+      <section class="contato" id="contato">
         <h4 class="titulos">Contato</h4>
-        <div class="mapa">
+        <p>R.Dr.Quirino 1528, Centro - Campinas/SP</p>
+        <div class="contato-info">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1092.680243389197!2d-47.05993272088282!3d-22.901432185086186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8b2dce74607%3A0x21bbf51a2fa6cca9!2sR.%20Dr.%20Quirino%2C%201528%20-%20Vila%20Itapura%2C%20Campinas%20-%20SP%2C%2013015-082!5e0!3m2!1spt-BR!2sbr!4v1620790873412!5m2!1spt-BR!2sbr"
-            width="100%"
-            height="650px"
             style="border: 0"
+            class="mapa"
             allowfullscreen=""
             loading="lazy"
           ></iframe>
-        </div>
-        <p>R.Dr.Quirino 1528, Centro - Campinas/SP</p>
-        <div class="contato-info">
-          <fieldset class="contato-opacao">
-            <legend>Como você prefere nos contactar?</legend>
-            <label for="radio-email">
-              <input
-                type="radio"
-                class="radio"
-                name="contatoOpcao"
-                id="radio-email"
-                value="email"
-                required
-              />
-              Email
-            </label>
+          <div class="contato-opcao">
+            <fieldset class="contato-opcao-selction">
+              <legend>Como você prefere nos contactar?</legend>
+              <label for="radio-email">
+                <input
+                  type="radio"
+                  class="radio"
+                  name="contatoOpcao"
+                  id="radio-email"
+                  value="email"
+                  required
+                />
+                Email
+              </label>
 
-            <label for="radio-wtt">
-              <input
-                type="radio"
-                class="radio"
-                name="contatoOpcao"
-                id="radio-wtt"
-                value="whatsapp"
-                required
-              />
-              WhatsApp
-            </label>
-          </fieldset>
-          <div class="div-zapzap" id="div-contato-selecionado"></div>
+              <label for="radio-wtt">
+                <input
+                  type="radio"
+                  class="radio"
+                  name="contatoOpcao"
+                  id="radio-wtt"
+                  value="whatsapp"
+                  required
+                />
+                WhatsApp
+              </label>
+            </fieldset>
+          </div>
+          <div class="div-opcao" id="divOpcao"></div>
         </div>
       </section>
     </main>

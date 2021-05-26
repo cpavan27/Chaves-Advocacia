@@ -1,29 +1,21 @@
-class ContatoController{
-    constructor(){
-        this._contatoOpcao = document.querySelectorAll(".radio");
-    };
+class ContatoController {
+  constructor() {
+    this._contatoOpcao = document.querySelectorAll(".radio");
+    this._divContato = document.querySelector("#divOpcao");
+  }
 
-    verificaOpcaoContato(){
-        this._contatoOpcao.forEach( n => {
-            n.addEventListener("change", function(event) {
-                let item = event.target.value;
-                console.log(item);
-                let divContato = document.querySelector("#div-contato-selecionado");
-                if(item == "email"){
-                    divContato.classList.remove("div-zapzap");
-                    divContato.innerHTML = ViewContato.showForm();                   
-                }else{
-                    divContato.classList.add("div-zapzap");
-                    divContato.innerHTML = ViewContato.showZap();
-                } 
-            });
-        });
-    }
-
-
-
-
-
-
-
+  verificaOpcaoContato() {
+    this._contatoOpcao.forEach((n) => {
+      n.addEventListener("change", function (event) {
+        let opcao = document.querySelector("#divOpcao");
+        if (event.target.value == "email") {
+          opcao.classList.remove("div-zapzap");
+          opcao.innerHTML = ViewContato.showForm();
+        } else {
+          opcao.classList.add("div-zapzap");
+          opcao.innerHTML = ViewContato.showZap();
+        }
+      });
+    });
+  }
 }
