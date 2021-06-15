@@ -12,7 +12,7 @@
 body,
 html {
   height: 100vh;
-  background-image: url("/images/dama-da-lei.webp");
+  background-image: url("../images/dama-da-lei.webp");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,8 +37,7 @@ header {
   font-size: 5em;
   margin-bottom: 0.7em;
 }
-.ul-nav {
-  
+.ul-nav {  
   display: flex;
   justify-content: space-around;
   padding: 1em;
@@ -54,7 +53,7 @@ header {
   padding: 4px 0;
   width: 100%;
   height: 42%;
-  border-top: double 7px rgb(119, 119, 119);
+  border-top: double 7px rgba(119, 119, 119, .5);
   font-size: 2em;
   font-family: "Nanum Myeongjo", serif;
   text-decoration: none;
@@ -64,7 +63,7 @@ header {
   transition: .4s ease-in-out;
 }
 .item-nav:hover .link-nav{
-  height: 100%;  
+  height: 70%;  
 }
 .whatsapp{
   border-radius: 50%;
@@ -229,7 +228,6 @@ header {
 }
 .atuacao-infos{
   max-height: 600px;
-  min-width: 600px;
   width:  100%;
   margin: 20px auto;
   padding: 2em 1em;
@@ -337,6 +335,7 @@ textarea {
   padding: 8px;
   border: none;
   border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 .botao {
   margin-top: 1em;
@@ -346,17 +345,17 @@ textarea {
   border: 1px solid #fefefe;
   background-color: #fefefe;
   font-size: 1.2em;
-  box-shadow: 2px 2px 2px #ccc;
-  transition: 0.2s;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 .botao:hover {  
-  background-color: goldenrod;
+  background-color: rgba(119, 119, 119, .5);
   color: #fefefe;
 }
 .botao:active {
   background-color: #fefefe;
-  color: goldenrod;
+  color: rgba(119, 119, 119, .5);
   box-shadow: none;
 }
 
@@ -466,12 +465,140 @@ footer{
   background-color: #e1306c;
   color: #ffffff;
 }
-
-@media (max-width: 700px) {
-  header {
-    width: auto;
+@media (max-width: 1400px){
+  .sobre{
+    flex-direction: column;
   }
+  .sobre-titulo{
+    margin-bottom: 2px;
+  }
+  .sobre-img{
+    width: 100%;
+    height: 50%;
+  }
+  .sobre-text{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1290px) {
+  .contato-titulo{
+    font-size: 2.5em;
+
+  }
+}
+@media (max-width: 1100px) {
+  .contato-titulo{
+    font-size: 2em;
+  }
+}
+@media (max-width: 1000px){ 
+  .whatsapp{
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-link::before{
+    font-size: 200%;
+  }
+  .tooltip-zap{
+    left: -39px;
+  }
+  .areas-atuacao, .areas-atuacao-titulo, .areas-atuacao-titulo-h3, .atuacao-label{
+    width: 100%;
+  }
+  .atuacao-infos{
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 40% 50%;
+    max-height: 95vh;
+  }
+  .atuacao-info-titulo{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .atuacao-info-img{
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .atuacao-info-texto{
+    height: 100%;
+    font-size: 1em;
+    font-style: italic;
+    line-height: 1em;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .div-atuacao{
+    width: 100%;
+    flex-direction: column;
+  }
+  .contato{
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  .mapa{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 20px;
+  }
+  .contato-titulo{
+    font-size: 2.8em;
+  }
+  .contato-email{
+    width: 100%;
+    height: 70%;
+  }
+  .input-text, textarea {
+    width: 100%;
+  }
+  .botao{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 939px){
+  header {
+    width: 100%;
+  }
+}
+@media (max-width: 870px){
   .ul-nav {
     flex-direction: column;
+    justify-content: space-between;
+  }
+  .item-nav{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .link-nav{
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 700px){
+  .sobre-text {
+    font-size: 1.5em;
+    line-height: auto;
+  }
+}
+@media (max-width: 455px){
+  .logo{
+    font-size: 3em;
+  }
+  .areas-atuacao-titulo-h3{
+    font-size: 2.3em;
+  }
+  .sobre-text {
+    font-size: 1em;
+    line-height: auto;
   }
 }
