@@ -35,10 +35,10 @@ header {
   text-align: center;
   font-family: "Playfair Display SC", serif;
   font-size: 5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.7em;
 }
 .ul-nav {
-  margin-top: 2em;
+  
   display: flex;
   justify-content: space-around;
   padding: 1em;
@@ -46,7 +46,7 @@ header {
 }
 .item-nav{
   width: 30%;
-  height: 47px;
+  height: 100px;
   display: flex;
   cursor: pointer;
 }
